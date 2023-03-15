@@ -1,0 +1,17 @@
+is_question = False
+sentence = ""
+
+while True:
+    char = input()
+    if char == ".":
+        if sentence[-1] == "?":
+            is_question = True
+        break
+    if char.isalnum() or char == " ":
+        sentence += char
+
+print(sentence)
+if is_question:
+    print("This is a question.")
+else:
+    print("This is a statement.")
